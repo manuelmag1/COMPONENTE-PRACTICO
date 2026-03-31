@@ -1,0 +1,4 @@
+repository "Componente 7 panteras sabias/Componente 7 panteras sabias@4674182461674@cloud"
+  path "/"
+    br "/main"
+    co "/main"
