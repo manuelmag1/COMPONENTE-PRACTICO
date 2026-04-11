@@ -1,43 +1,79 @@
 using UnityEngine;
-using TMPro; // Esencial para interactuar con la UI de TextMeshPro
+using TMPro;
 
 public class RopeRotation : MonoBehaviour
 {
     [Header("Configuración de la Cuerda")]
-    public float velocidadGiro = 150f;
+    public float velocidadNormal = 150f;
+    public float velocidadRapida = 300f; // Ajusta esta velocidad en el inspector
+    private float velocidadActual;
 
     [Header("Interfaz de Usuario")]
-    public TextMeshProUGUI textoContador; // Aquí arrastraremos nuestro texto desde el inspector
+    public TextMeshProUGUI textoContador;
+
+    [Header("Objetos Podoboo")]
+    [Tooltip("Arrastra aquí todos los podoboos amarillos")]
+    public GameObject[] podoboosAmarillos; 
+    
+    [Tooltip("Arrastra aquí todos los podoboos azules")]
+    public GameObject[] podoboosAzules;
 
     private float gradosAcumulados = 0f;
     private int vueltasCompletadas = 0;
+    private bool yaCambioColor = false;
+
+    void Start()
+    {
+        // Iniciamos con la velocidad normal
+        velocidadActual = velocidadNormal;
+        
+        // Nos aseguramos de que al darle Play, los amarillos estén encendidos y los azules apagados
+        CambiarEstadoPodoboos(podoboosAmarillos, true);
+        CambiarEstadoPodoboos(podoboosAzules, false);
+    }
 
     void Update()
     {
-        // 1. Calculamos cuánto va a girar exactamente en este frame
-        float giroEnEsteFrame = velocidadGiro * Time.deltaTime;
-
-        // 2. Aplicamos la rotación (tu código original)
+        // 1. Calculamos el giro usando la velocidadActual (que cambiará más adelante)
+        float giroEnEsteFrame = velocidadActual * Time.deltaTime;
         transform.Rotate(Vector3.right, giroEnEsteFrame, Space.Self);
-
-        // 3. Sumamos el giro a nuestro acumulador. 
-        // Usamos Mathf.Abs por si decides poner una velocidad negativa para que gire al revés.
         gradosAcumulados += Mathf.Abs(giroEnEsteFrame);
 
-        // 4. Si los grados acumulados llegan a 360, significa que dio una vuelta entera
+        // 2. Comprobamos si dio una vuelta
         if (gradosAcumulados >= 360f)
         {
-            // Restamos 360 al acumulador para empezar a contar la siguiente vuelta, 
-            // conservando cualquier pequeño exceso para ser exactos.
             gradosAcumulados -= 360f; 
-            
-            // Sumamos 1 al contador de vueltas
             vueltasCompletadas++;
 
-            // Actualizamos el texto en la pantalla (solo si asignaste el texto en el inspector)
             if (textoContador != null)
             {
                 textoContador.text = vueltasCompletadas.ToString();
+            }
+
+            // 3. Lógica de cambio de velocidad al llegar a 20
+            if (vueltasCompletadas == 20)
+            {
+                velocidadActual = velocidadRapida;
+            }
+
+            // 4. Lógica de cambio de color al llegar a 21
+            if (vueltasCompletadas == 21 && !yaCambioColor)
+            {
+                CambiarEstadoPodoboos(podoboosAmarillos, false); // Apagamos amarillos
+                CambiarEstadoPodoboos(podoboosAzules, true);   // Encendemos azules
+                yaCambioColor = true; // Evitamos que este código se repita en la vuelta 22, 23, etc.
+            }
+        }
+    }
+
+    // Función auxiliar para encender o apagar grupos enteros de objetos
+    private void CambiarEstadoPodoboos(GameObject[] grupo, bool estado)
+    {
+        foreach (GameObject podoboo in grupo)
+        {
+            if (podoboo != null)
+            {
+                podoboo.SetActive(estado);
             }
         }
     }
