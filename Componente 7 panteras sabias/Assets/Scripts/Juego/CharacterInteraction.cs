@@ -4,22 +4,36 @@ using System.Collections;
 public class InteraccionPersonaje : MonoBehaviour
 {
     private Animator anim;
-    private bool yaFueGolpeado = false;
+    public bool yaFueGolpeado = false;
 
     void Start()
     {
-        // Como el script ahora está en Mario, buscamos el Animator aquí mismo
         anim = GetComponent<Animator>();
+
+        // (Opcional) Si pusiste aquí el código para apagar a los que no juegan desde el menú, déjalo aquí:
+        // if (gameObject.name == "Mario" && !SeleccionPersonajes.juegaMario) gameObject.SetActive(false);
+        // if (gameObject.name == "Wario" && !SeleccionPersonajes.juegaWario) gameObject.SetActive(false);
+        // if (gameObject.name == "Peach" && !SeleccionPersonajes.juegaPeach) gameObject.SetActive(false);
+        // if (gameObject.name == "Kong" && !SeleccionPersonajes.juegaKong) gameObject.SetActive(false);
     }
 
-    // Esta función detectará automáticamente si algo toca la cápsula de Mario
     void OnTriggerEnter(Collider otro)
     {
-        // Solo nos importa si lo que nos tocó tiene la etiqueta "Podoboo"
         if (otro.CompareTag("Podoboo") && !yaFueGolpeado)
         {
-            Debug.Log("¡Mario fue quemado por el Podoboo!");
+            // Usamos gameObject.name para saber exactamente quién se quemó
+            Debug.Log("¡" + gameObject.name + " fue quemado por el Podoboo!");
+            
             yaFueGolpeado = true;
+
+            // --- ¡ESTA ES LA LÍNEA NUEVA VITAL! ---
+            // Le avisamos al cerebro del juego que este personaje acaba de perder
+            if (GameManager.Instancia != null) 
+            {
+                GameManager.Instancia.RegistrarMuerte();
+            }
+            // --------------------------------------
+
             StartCoroutine(SecuenciaDeEliminacion());
         }
     }
@@ -34,7 +48,7 @@ public class InteraccionPersonaje : MonoBehaviour
         // Esperamos a que termine la animación
         yield return new WaitForSeconds(1.5f);
 
-        // Desactivamos a Mario
+        // Desactivamos al personaje
         gameObject.SetActive(false);
     }
 }
