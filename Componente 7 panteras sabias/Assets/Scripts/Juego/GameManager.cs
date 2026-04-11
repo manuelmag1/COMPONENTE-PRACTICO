@@ -1,22 +1,22 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using UnityEngine.SceneManagement; // ¡NUEVO! Necesario para cambiar de escena
+using UnityEngine.SceneManagement; // NEW! Necessary to change scenes
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instancia; 
 
-    [Header("Interfaz")]
+    [Header("Interface")]
     public TextMeshProUGUI textoCuentaRegresiva;
     public TextMeshProUGUI textoVictoria; 
-    public GameObject panelBotonesFinales; // ¡NUEVO! Aquí arrastraremos los botones
+    public GameObject panelBotonesFinales; // NEW! We drag the buttons here
 
-    [Header("Jugadores")]
+    [Header("Players")]
     public GameObject[] todosLosJugadores; 
     private int jugadoresVivos = 0;
 
-    [Header("Estado del Juego")]
+    [Header("Game State")]
     public bool juegoActivo = false;
 
     void Awake()
@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
         StartCoroutine(RutinaInicioJuego());
         StartCoroutine(ContarJugadoresAlInicio());
     }
+
+    // On startup, we count active players
 
     IEnumerator ContarJugadoresAlInicio()
     {
@@ -56,7 +58,7 @@ public class GameManager : MonoBehaviour
         textoCuentaRegresiva.text = "1";
         yield return new WaitForSeconds(1f);
 
-        textoCuentaRegresiva.text = "YA!";
+        textoCuentaRegresiva.text = "GO!";
         juegoActivo = true; 
 
         yield return new WaitForSeconds(1f);
@@ -74,10 +76,10 @@ public class GameManager : MonoBehaviour
         else if (jugadoresVivos <= 0) 
         {
             juegoActivo = false;
-            textoVictoria.text = "EMPATE!";
+            textoVictoria.text = "TIE!";
             textoVictoria.gameObject.SetActive(true);
             
-            // Si hay empate, también mostramos los botones
+            // If there's a tie, we also show the buttons
             if (panelBotonesFinales != null) panelBotonesFinales.SetActive(true);
         }
     }
@@ -110,7 +112,7 @@ public class GameManager : MonoBehaviour
             textoVictoria.text = ganador.name.ToUpper() + " WINS!";
             textoVictoria.gameObject.SetActive(true);
             
-            // ¡NUEVO! Mostramos los botones de revancha y salir
+            // NEW! We show the rematch and quit buttons
             if (panelBotonesFinales != null) panelBotonesFinales.SetActive(true);
 
             Animator anim = ganador.GetComponent<Animator>();
@@ -121,18 +123,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // --- ¡NUEVAS FUNCIONES PARA LOS BOTONES! ---
+    // --- NEW FUNCTIONS FOR THE BUTTONS! ---
 
     public void IrARevancha()
     {
-        // Cambia "MenuPrincipal" por el nombre exacto de tu escena de menú.
-        // Las variables estáticas recordarán quiénes estaban jugando.
+        // Change "MainMenu" to the exact name of your menu scene.
+        // The static variables will remember who was playing.
         SceneManager.LoadScene(0); 
     }
 
     public void SalirDelJuego()
     {
-        Debug.Log("Cerrando el juego...");
-        Application.Quit(); // Esto cerrará el juego cuando lo exportes a .exe
+        Debug.Log("Closing the game...");
+        Application.Quit(); // This will close the game when you export to .exe
     }
 }

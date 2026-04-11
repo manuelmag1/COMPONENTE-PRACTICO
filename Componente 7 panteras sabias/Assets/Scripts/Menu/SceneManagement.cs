@@ -3,20 +3,20 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : MonoBehaviour
 {
-    [Header("Estructura de la Interfaz")]
+    [Header("UI Structure")]
     public GameObject menuInicial;     
     public GameObject pantallaReglas;  
-    public GameObject pantallaSeleccion; // ¡NUEVA! Aquí arrastraremos la selección de personajes
+    public GameObject pantallaSeleccion; // NEW! We drag the character selection here
 
     void Start()
     {
-        // Al iniciar, solo mostramos el menú principal
+        // On startup, we only show the main menu
         if (menuInicial != null) menuInicial.SetActive(true);
         if (pantallaReglas != null) pantallaReglas.SetActive(false);
         if (pantallaSeleccion != null) pantallaSeleccion.SetActive(false); 
     }
 
-    // 1. Del Menú Inicial a las Reglas
+    // 1. From Main Menu to Rules
     public void MostrarReglas()
     {
         if (menuInicial != null) menuInicial.SetActive(false);
@@ -24,14 +24,14 @@ public class MenuPrincipal : MonoBehaviour
         if (pantallaSeleccion != null) pantallaSeleccion.SetActive(false);
     }
 
-    // 2. De las Reglas a la Selección de Personajes (PARA TU BOTÓN SIGUIENTE)
+    // 2. From Rules to Character Selection (FOR YOUR NEXT BUTTON)
     public void IrASeleccionPersonajes()
     {
         if (pantallaReglas != null) pantallaReglas.SetActive(false);
         if (pantallaSeleccion != null) pantallaSeleccion.SetActive(true);
     }
 
-    // 3. Botón para regresar al principio desde cualquier lado
+    // 3. Button to return to the beginning from anywhere
     public void VolverAlMenuInicial()
     {
         if (pantallaReglas != null) pantallaReglas.SetActive(false);
@@ -39,7 +39,7 @@ public class MenuPrincipal : MonoBehaviour
         if (menuInicial != null) menuInicial.SetActive(true);
     }
 
-    // (Opcional) Por si decides poner un botón que salte directamente al nivel
+    // (Optional) In case you decide to put a button that jumps directly to the level
     public void EmpezarNivel()
     {
         SceneManager.LoadScene("Nivel1"); 

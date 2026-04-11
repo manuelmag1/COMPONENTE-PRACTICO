@@ -3,19 +3,19 @@ using TMPro;
 
 public class RopeRotation : MonoBehaviour
 {
-    [Header("Configuración de la Cuerda")]
+    [Header("Rope Configuration")]
     public float velocidadNormal = 150f;
-    public float velocidadRapida = 300f; // Ajusta esta velocidad en el inspector
+    public float velocidadRapida = 300f; // Adjust this speed in the inspector
     private float velocidadActual;
 
-    [Header("Interfaz de Usuario")]
+    [Header("User Interface")]
     public TextMeshProUGUI textoContador;
 
-    [Header("Objetos Podoboo")]
-    [Tooltip("Arrastra aquí todos los podoboos amarillos")]
+    [Header("Podoboo Objects")]
+    [Tooltip("Drag all yellow podoboos here")]
     public GameObject[] podoboosAmarillos; 
     
-    [Tooltip("Arrastra aquí todos los podoboos azules")]
+    [Tooltip("Drag all blue podoboos here")]
     public GameObject[] podoboosAzules;
 
     private float gradosAcumulados = 0f;
@@ -24,10 +24,10 @@ public class RopeRotation : MonoBehaviour
 
     void Start()
     {
-        // Iniciamos con la velocidad normal
+        // We start with normal speed
         velocidadActual = velocidadNormal;
         
-        // Nos aseguramos de que al darle Play, los azules estén encendidos y los amarillos apagados
+        // We make sure that when you press Play, the blue ones are on and the yellow ones are off
         CambiarEstadoPodoboos(podoboosAzules, true);
         CambiarEstadoPodoboos(podoboosAmarillos, false);
     }
@@ -35,15 +35,15 @@ public class RopeRotation : MonoBehaviour
     void Update()
     {
 
-        // ¡NUEVA LÍNEA! Si el juego no está activo, detenemos la función aquí mismo.
+        // NEW LINE! If the game is not active, we stop the function right here.
         if (GameManager.Instancia != null && !GameManager.Instancia.juegoActivo) return;
         
-        // 1. Calculamos el giro usando la velocidadActual (que cambiará más adelante)
+        // 1. We calculate the rotation using the current speed (which will change later)
         float giroEnEsteFrame = velocidadActual * Time.deltaTime;
         transform.Rotate(Vector3.right, giroEnEsteFrame, Space.Self);
         gradosAcumulados += Mathf.Abs(giroEnEsteFrame);
 
-        // 2. Comprobamos si dio una vuelta
+        // 2. We check if it completed one rotation
         if (gradosAcumulados >= 360f)
         {
             gradosAcumulados -= 360f; 
@@ -54,23 +54,23 @@ public class RopeRotation : MonoBehaviour
                 textoContador.text = vueltasCompletadas.ToString();
             }
 
-            // 3. Lógica de aumento gradual de velocidad cada 5-7 vueltas (+5 puntos)
+            // 3. Gradual speed increase logic every 5-7 rotations (+5 points)
             if (vueltasCompletadas > 0 && vueltasCompletadas % 6 == 0)
             {
                 velocidadActual += 5f;
             }
 
-            // 4. Lógica de cambio de color al llegar a 10 vueltas (azul a amarillo)
+            // 4. Color change logic when reaching 10 rotations (blue to yellow)
             if (vueltasCompletadas == 10 && !yaCambioColor)
             {
-                CambiarEstadoPodoboos(podoboosAzules, false);   // Apagamos azules
-                CambiarEstadoPodoboos(podoboosAmarillos, true); // Encendemos amarillos
-                yaCambioColor = true; // Evitamos que este código se repita en la vuelta 11, 12, etc.
+                CambiarEstadoPodoboos(podoboosAzules, false);   // Turn off blues
+                CambiarEstadoPodoboos(podoboosAmarillos, true); // Turn on yellows
+                yaCambioColor = true; // We prevent this code from repeating on rotation 11, 12, etc.
             }
         }
     }
 
-    // Función auxiliar para encender o apagar grupos enteros de objetos
+    // Helper function to turn on or off entire groups of objects
     private void CambiarEstadoPodoboos(GameObject[] grupo, bool estado)
     {
         foreach (GameObject podoboo in grupo)

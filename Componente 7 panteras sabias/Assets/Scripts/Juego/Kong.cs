@@ -3,50 +3,50 @@ using UnityEngine.InputSystem;
 
 public class Kong : MonoBehaviour
 {
-    [Header("Configuración de Salto")]
-    public float fuerzaSalto = 5f; // Ajusta este valor para saltar más alto o más bajo
+    [Header("Jump Configuration")]
+    public float fuerzaSalto = 5f; // Adjust this value to jump higher or lower
 
-    [Header("Configuración de Suelo")]
-    [Tooltip("Distancia desde el centro del personaje hasta los pies para detectar el suelo")]
+    [Header("Ground Configuration")]
+    [Tooltip("Distance from the character's center to the feet to detect the ground")]
     public float distanciaSuelo = 0.02f; 
-    [Tooltip("Desplazamiento vertical desde la posición del personaje para iniciar el rayo, útil si el collider no está en 0")]
+    [Tooltip("Vertical offset from the character's position to start the ray, useful if the collider is not at 0")]
     public float offsetRayo = 0.5f;
-    [Tooltip("La capa (Layer) que representa el suelo")]
+    [Tooltip("The layer that represents the ground")]
     public LayerMask capaSuelo;
 
     private Rigidbody rb;
     private Animator anim;
 
-    [SerializeField, Tooltip("Muestra en el Inspector si el script detecta el suelo")]
+    [SerializeField, Tooltip("Shows in the Inspector if the script detects the ground")]
     private bool estaEnElSuelo;
 
     void Start()
     {
-        // Obtenemos los componentes adjuntos al objeto
+        // We get the components attached to the object
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
 
     void Update()
     {
-        // Determinamos el origen del rayo, elevándolo ligeramente si el centro está desalineado
+        // We determine the ray origin, raising it slightly if the center is misaligned
         Vector3 origenRayo = transform.position + Vector3.up * offsetRayo;
 
-        // Detectamos si el personaje está tocando el suelo mediante un rayo hacia abajo
+        // We detect if the character is touching the ground via a downward ray
         estaEnElSuelo = Physics.Raycast(origenRayo, Vector3.down, distanciaSuelo + offsetRayo, capaSuelo);
 
-        // Actualizamos la variable del Animator para saber si está en el suelo o cayendo/saltando
+        // We update the Animator variable to know if it's on the ground or falling/jumping
         if (anim != null)
         {
             anim.SetBool("enSuelo", estaEnElSuelo);
         }
 
-        // Comprobamos si se presiona la tecla L
+        // We check if the L key is pressed
         if (Keyboard.current != null && Keyboard.current.lKey.wasPressedThisFrame)
         {
-            Debug.Log("Tecla L presionada por Kong. Detecta suelo: " + estaEnElSuelo);
+            Debug.Log("L key pressed by Kong. Detects ground: " + estaEnElSuelo);
 
-            // Solo saltamos si estamos en el suelo y NO estamos ya moviéndonos hacia arriba
+            // We only jump if we're on the ground and NOT already moving upward
             if (estaEnElSuelo && rb != null && rb.linearVelocity.y <= 0.1f)
             {
                 Saltar();
@@ -56,13 +56,13 @@ public class Kong : MonoBehaviour
 
     void Saltar()
     {
-        // Solo saltamos si tenemos el componente Rigidbody
+        // We only jump if we have the Rigidbody component
         if (rb != null)
         {
-            // Aplicamos un impulso hacia arriba
+            // We apply an upward impulse
             rb.AddForce(Vector3.up * fuerzaSalto, ForceMode.Impulse);
 
-            // Si quieres que inicie una animación forzada al instante al presionar saltar
+            // If you want a forced animation to start instantly when pressing jump
             if (anim != null) 
             {
                 anim.SetTrigger("salto");
@@ -70,7 +70,7 @@ public class Kong : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("¡Falta añadir un Rigidbody al objeto de Kong!");
+            Debug.LogWarning("Missing adding a Rigidbody to Kong's object!");
         }
     }
 }

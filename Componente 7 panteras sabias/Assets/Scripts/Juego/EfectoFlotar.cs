@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class EfectoFlotar : MonoBehaviour
 {
-    [Header("Configuración de Flotación")]
-    [Tooltip("Qué tanto sube y baja el fuego (Distancia).")]
+    [Header("Floating Configuration")]
+    [Tooltip("How much the fire goes up and down (Distance).")]
     public float amplitud = 0.1f;
 
-    [Tooltip("Qué tan rápido hace el recorrido de subir y bajar.")]
+    [Tooltip("How fast it moves up and down.")]
     public float velocidad = 2f;
 
     private Vector3 posicionInicial;
@@ -15,20 +15,20 @@ public class EfectoFlotar : MonoBehaviour
 
     void Start()
     {
-        // Guardamos la posición original donde colocaste el objeto en la escena
+        // We store the original position where you placed the object in the scene
         posicionInicial = transform.position;
 
-        // TRUCO PRO: Le damos un número aleatorio al inicio. 
-        // Esto hace que si tienes 5 fuegos, no suban y bajen exactamente al mismo tiempo.
+        // PRO TIP: We give it a random number at the start. 
+        // This makes it so if you have 5 fires, they don't go up and down at exactly the same time.
         desfaseAleatorio = UnityEngine.Random.Range(0f, 2f * Mathf.PI);
     }
 
     void Update()
     {
-        // Calculamos la nueva altura (Y) usando la función matemática Seno
+        // We calculate the new height (Y) using the mathematical function Sine
         float nuevaY = posicionInicial.y + Mathf.Sin((Time.time * velocidad) + desfaseAleatorio) * amplitud;
 
-        // Le aplicamos la nueva posición al objeto, dejando X y Z exactamente igual
+        // We apply the new position to the object, leaving X and Z exactly the same
         transform.position = new Vector3(posicionInicial.x, nuevaY, posicionInicial.z);
     }
 }

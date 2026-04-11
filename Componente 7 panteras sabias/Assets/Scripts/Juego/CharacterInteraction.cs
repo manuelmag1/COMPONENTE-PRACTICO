@@ -10,7 +10,7 @@ public class InteraccionPersonaje : MonoBehaviour
     {
         anim = GetComponent<Animator>();
 
-        // (Opcional) Si pusiste aquí el código para apagar a los que no juegan desde el menú, déjalo aquí:
+        // (Optional) If you put the code here to turn off those who don't play from the menu, leave it here:
         // if (gameObject.name == "Mario" && !SeleccionPersonajes.juegaMario) gameObject.SetActive(false);
         // if (gameObject.name == "Wario" && !SeleccionPersonajes.juegaWario) gameObject.SetActive(false);
         // if (gameObject.name == "Peach" && !SeleccionPersonajes.juegaPeach) gameObject.SetActive(false);
@@ -21,18 +21,18 @@ public class InteraccionPersonaje : MonoBehaviour
     {
         if (otro.CompareTag("Podoboo") && !yaFueGolpeado)
         {
-            // Usamos gameObject.name para saber exactamente quién se quemó
-            Debug.Log("¡" + gameObject.name + " fue quemado por el Podoboo!");
+            // We use gameObject.name to know exactly who got burned
+            Debug.Log("" + gameObject.name + " was burned by the Podoboo!");
             
             yaFueGolpeado = true;
 
-            // --- ¡ESTA ES LA LÍNEA NUEVA VITAL! ---
-            // Le avisamos al cerebro del juego que este personaje acaba de perder
+            // --- THIS IS THE NEW VITAL LINE! ---
+            // We notify the game brain that this character just lost
             if (GameManager.Instancia != null) 
             {
                 GameManager.Instancia.RegistrarMuerte();
             }
-            // --------------------------------------
+            // -------- ----
 
             StartCoroutine(SecuenciaDeEliminacion());
         }
@@ -45,10 +45,10 @@ public class InteraccionPersonaje : MonoBehaviour
             anim.SetTrigger("CaminarFuera"); 
         }
 
-        // Esperamos a que termine la animación
+        // We wait for the animation to finish
         yield return new WaitForSeconds(1.5f);
 
-        // Desactivamos al personaje
+        // We deactivate the character
         gameObject.SetActive(false);
     }
 }

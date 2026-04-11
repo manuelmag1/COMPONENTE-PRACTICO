@@ -1,17 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI; 
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement; // ¡VITAL para cambiar de escena!
+using UnityEngine.SceneManagement; // VITAL to change scenes!
 
 public class SeleccionPersonajes : MonoBehaviour
 {
-    [Header("Imágenes de la Interfaz")]
+    [Header("Interface Images")]
     public RawImage fotoMario;
     public RawImage fotoWario;
     public RawImage fotoPeach;
     public RawImage fotoKong;
 
-    [Header("Colores de Estado")]
+    [Header("Status Colors")]
     public Color colorDisponible = Color.white;
     public Color colorConfirmado = Color.gray; 
 
@@ -28,7 +28,7 @@ public class SeleccionPersonajes : MonoBehaviour
 
     void Update()
     {
-        // --- SELECCIÓN DE PERSONAJES ---
+        // --- CHARACTER SELECTION ---
         if (Keyboard.current != null && Keyboard.current.aKey.wasPressedThisFrame)
         {
             juegaMario = !juegaMario; 
@@ -53,14 +53,14 @@ public class SeleccionPersonajes : MonoBehaviour
             fotoKong.color = juegaKong ? colorConfirmado : colorDisponible;
         }
 
-        // --- INICIAR EL JUEGO (BARRA ESPACIADORA) ---
+        // --- START THE GAME (SPACEBAR) ---
         if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            // Opcional: Evitar que el juego empiece si nadie se ha seleccionado
+            // Optional: Prevent the game from starting if no one has been selected
             if (!juegaMario && !juegaWario && !juegaPeach && !juegaKong)
             {
-                Debug.Log("¡Selecciona al menos un personaje primero!");
-                return; // Corta la función aquí para no cargar la escena
+                Debug.Log("Select at least one character first!");
+                return; // Cut the function here to not load the scene
             }
 
             SceneManager.LoadScene("Juego"); 
