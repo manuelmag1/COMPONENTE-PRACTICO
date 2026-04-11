@@ -8,23 +8,17 @@ public class InteraccionPersonaje : MonoBehaviour
 
     void Start()
     {
-        anim = GetComponentInParent<Animator>();
+        // Como el script ahora está en Mario, buscamos el Animator aquí mismo
+        anim = GetComponent<Animator>();
     }
 
+    // Esta función detectará automáticamente si algo toca la cápsula de Mario
     void OnTriggerEnter(Collider otro)
     {
-        // 1. Ignoramos si los pies chocan con el propio cuerpo del personaje
-        if (otro.gameObject == transform.parent.gameObject)
-        {
-            return; // No hacemos nada, nos salimos de la función
-        }
-
-        // 2. Ahora sí, esto nos avisará solo cuando toque ALGO MÁS (como el piso o el fuego)
-        Debug.Log("¡Choque! Mis pies tocaron a: " + otro.gameObject.name + " - Etiqueta: " + otro.tag);
-
+        // Solo nos importa si lo que nos tocó tiene la etiqueta "Podoboo"
         if (otro.CompareTag("Podoboo") && !yaFueGolpeado)
         {
-            Debug.Log("¡FUEGO DETECTADO! Ejecutando animación...");
+            Debug.Log("¡Mario fue quemado por el Podoboo!");
             yaFueGolpeado = true;
             StartCoroutine(SecuenciaDeEliminacion());
         }
@@ -37,11 +31,10 @@ public class InteraccionPersonaje : MonoBehaviour
             anim.SetTrigger("CaminarFuera"); 
         }
 
+        // Esperamos a que termine la animación
         yield return new WaitForSeconds(1.5f);
 
-        if (transform.parent != null)
-        {
-            transform.parent.gameObject.SetActive(false);
-        }
+        // Desactivamos a Mario
+        gameObject.SetActive(false);
     }
 }
