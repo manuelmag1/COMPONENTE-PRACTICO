@@ -27,13 +27,17 @@ public class RopeRotation : MonoBehaviour
         // Iniciamos con la velocidad normal
         velocidadActual = velocidadNormal;
         
-        // Nos aseguramos de que al darle Play, los amarillos estén encendidos y los azules apagados
-        CambiarEstadoPodoboos(podoboosAmarillos, true);
-        CambiarEstadoPodoboos(podoboosAzules, false);
+        // Nos aseguramos de que al darle Play, los azules estén encendidos y los amarillos apagados
+        CambiarEstadoPodoboos(podoboosAzules, true);
+        CambiarEstadoPodoboos(podoboosAmarillos, false);
     }
 
     void Update()
     {
+
+        // ¡NUEVA LÍNEA! Si el juego no está activo, detenemos la función aquí mismo.
+        if (GameManager.Instancia != null && !GameManager.Instancia.juegoActivo) return;
+        
         // 1. Calculamos el giro usando la velocidadActual (que cambiará más adelante)
         float giroEnEsteFrame = velocidadActual * Time.deltaTime;
         transform.Rotate(Vector3.right, giroEnEsteFrame, Space.Self);
@@ -50,18 +54,18 @@ public class RopeRotation : MonoBehaviour
                 textoContador.text = vueltasCompletadas.ToString();
             }
 
-            // 3. Lógica de cambio de velocidad al llegar a 20
-            if (vueltasCompletadas == 20)
+            // 3. Lógica de aumento gradual de velocidad cada 5-7 vueltas (+5 puntos)
+            if (vueltasCompletadas > 0 && vueltasCompletadas % 6 == 0)
             {
-                velocidadActual = velocidadRapida;
+                velocidadActual += 5f;
             }
 
-            // 4. Lógica de cambio de color al llegar a 21
-            if (vueltasCompletadas == 21 && !yaCambioColor)
+            // 4. Lógica de cambio de color al llegar a 10 vueltas (azul a amarillo)
+            if (vueltasCompletadas == 10 && !yaCambioColor)
             {
-                CambiarEstadoPodoboos(podoboosAmarillos, false); // Apagamos amarillos
-                CambiarEstadoPodoboos(podoboosAzules, true);   // Encendemos azules
-                yaCambioColor = true; // Evitamos que este código se repita en la vuelta 22, 23, etc.
+                CambiarEstadoPodoboos(podoboosAzules, false);   // Apagamos azules
+                CambiarEstadoPodoboos(podoboosAmarillos, true); // Encendemos amarillos
+                yaCambioColor = true; // Evitamos que este código se repita en la vuelta 11, 12, etc.
             }
         }
     }
