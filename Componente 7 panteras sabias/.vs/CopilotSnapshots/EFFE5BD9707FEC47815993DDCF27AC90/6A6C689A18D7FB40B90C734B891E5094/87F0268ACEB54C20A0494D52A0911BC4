@@ -1,15 +1,15 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class wario : MonoBehaviour
+public class Mario : MonoBehaviour
 {
     [Header("Configuraci�n de Salto")]
     public float fuerzaSalto = 5f; // Ajusta este valor para saltar m�s alto o m�s bajo
 
     [Header("Configuraci�n de Suelo")]
     [Tooltip("Distancia desde el centro del personaje hasta los pies para detectar el suelo")]
-    public float distanciaSuelo = 0.02f; 
-    [Tooltip("Desplazamiento vertical desde la posición del personaje para iniciar el rayo, útil si el collider no está en 0")]
+    public float distanciaSuelo = 1.1f; 
+    [Tooltip("Desplazamiento vertical desde la posici�n del personaje para iniciar el rayo, �til si el collider no est� en 0")]
     public float offsetRayo = 0.5f;
     [Tooltip("La capa (Layer) que representa el suelo")]
     public LayerMask capaSuelo;
@@ -29,10 +29,12 @@ public class wario : MonoBehaviour
 
     void Update()
     {
-        // Determinamos el origen del rayo, elevándolo ligeramente si el centro está desalineado
+        // Determinamos el origen del rayo, elev�ndolo ligeramente si el centro est� desalineado
         Vector3 origenRayo = transform.position + Vector3.up * offsetRayo;
 
-        // Detectamos si el personaje está tocando el suelo mediante un rayo hacia abajo
+        Debug.DrawRay(origenRayo, Vector3.down * (distanciaSuelo + offsetRayo), Color.red);
+
+        // Detectamos si el personaje est� tocando el suelo mediante un rayo hacia abajo
         estaEnElSuelo = Physics.Raycast(origenRayo, Vector3.down, distanciaSuelo + offsetRayo, capaSuelo);
 
         // Actualizamos la variable del Animator para saber si est� en el suelo o cayendo/saltando
@@ -41,12 +43,12 @@ public class wario : MonoBehaviour
             anim.SetBool("enSuelo", estaEnElSuelo);
         }
 
-        // Comprobamos si se presiona la tecla V
-        if (Keyboard.current != null && Keyboard.current.vKey.wasPressedThisFrame)
+        // Comprobamos si se presiona la tecla A
+        if (Keyboard.current != null && Keyboard.current.aKey.wasPressedThisFrame)
         {
-            Debug.Log("Tecla V presionada por Wario. Detecta suelo: " + estaEnElSuelo);
+            Debug.Log("Tecla A presionada por Mario. Detecta suelo: " + estaEnElSuelo);
 
-            // Solo saltamos si estamos en el suelo y NO estamos ya moviéndonos hacia arriba
+            // Solo saltamos si estamos en el suelo y NO estamos ya movi�ndonos hacia arriba
             if (estaEnElSuelo && rb != null && rb.linearVelocity.y <= 0.1f)
             {
                 Saltar();
@@ -70,7 +72,7 @@ public class wario : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("�Falta a�adir un Rigidbody al objeto de Wario!");
+            Debug.LogWarning("�Falta a�adir un Rigidbody al objeto de Mario!");
         }
     }
 }

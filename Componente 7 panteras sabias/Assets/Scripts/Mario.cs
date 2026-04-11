@@ -3,13 +3,13 @@ using UnityEngine.InputSystem;
 
 public class Mario : MonoBehaviour
 {
-    [Header("Configuración de Salto")]
-    public float fuerzaSalto = 5f; // Ajusta este valor para saltar más alto o más bajo
+    [Header("Configuraciï¿½n de Salto")]
+    public float fuerzaSalto = 5f; // Ajusta este valor para saltar mï¿½s alto o mï¿½s bajo
 
-    [Header("Configuración de Suelo")]
+    [Header("Configuraciï¿½n de Suelo")]
     [Tooltip("Distancia desde el centro del personaje hasta los pies para detectar el suelo")]
-    public float distanciaSuelo = 1.1f; 
-    [Tooltip("Desplazamiento vertical desde la posición del personaje para iniciar el rayo, útil si el collider no está en 0")]
+    public float distanciaSuelo = 0.02f; 
+    [Tooltip("Desplazamiento vertical desde la posiciï¿½n del personaje para iniciar el rayo, ï¿½til si el collider no estï¿½ en 0")]
     public float offsetRayo = 0.5f;
     [Tooltip("La capa (Layer) que representa el suelo")]
     public LayerMask capaSuelo;
@@ -29,13 +29,13 @@ public class Mario : MonoBehaviour
 
     void Update()
     {
-        // Determinamos el origen del rayo, elevándolo ligeramente si el centro está desalineado
+        // Determinamos el origen del rayo, elevï¿½ndolo ligeramente si el centro estï¿½ desalineado
         Vector3 origenRayo = transform.position + Vector3.up * offsetRayo;
 
-        // Detectamos si el personaje está tocando el suelo mediante un rayo hacia abajo
+        // Detectamos si el personaje estï¿½ tocando el suelo mediante un rayo hacia abajo
         estaEnElSuelo = Physics.Raycast(origenRayo, Vector3.down, distanciaSuelo + offsetRayo, capaSuelo);
 
-        // Actualizamos la variable del Animator para saber si está en el suelo o cayendo/saltando
+        // Actualizamos la variable del Animator para saber si estï¿½ en el suelo o cayendo/saltando
         if (anim != null)
         {
             anim.SetBool("enSuelo", estaEnElSuelo);
@@ -46,8 +46,8 @@ public class Mario : MonoBehaviour
         {
             Debug.Log("Tecla A presionada por Mario. Detecta suelo: " + estaEnElSuelo);
 
-            // Solo saltamos si estamos en el suelo
-            if (estaEnElSuelo)
+            // Solo saltamos si estamos en el suelo y NO estamos ya moviï¿½ndonos hacia arriba
+            if (estaEnElSuelo && rb != null && rb.linearVelocity.y <= 0.1f)
             {
                 Saltar();
             }
@@ -62,7 +62,7 @@ public class Mario : MonoBehaviour
             // Aplicamos un impulso hacia arriba
             rb.AddForce(Vector3.up * fuerzaSalto, ForceMode.Impulse);
 
-            // Si quieres que inicie una animación forzada al instante al presionar saltar
+            // Si quieres que inicie una animaciï¿½n forzada al instante al presionar saltar
             if (anim != null) 
             {
                 anim.SetTrigger("salto");
@@ -70,7 +70,7 @@ public class Mario : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("¡Falta añadir un Rigidbody al objeto de Mario!");
+            Debug.LogWarning("ï¿½Falta aï¿½adir un Rigidbody al objeto de Mario!");
         }
     }
 }

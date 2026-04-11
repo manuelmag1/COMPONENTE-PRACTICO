@@ -3,13 +3,13 @@ using UnityEngine.InputSystem;
 
 public class Peach : MonoBehaviour
 {
-    [Header("ConfiguraciÛn de Salto")]
-    public float fuerzaSalto = 5f; // Ajusta este valor para saltar m·s alto o m·s bajo
+    [Header("Configuraci√≥n de Salto")]
+    public float fuerzaSalto = 5f; // Ajusta este valor para saltar m√°s alto o m√°s bajo
 
-    [Header("ConfiguraciÛn de Suelo")]
+    [Header("Configuraci√≥n de Suelo")]
     [Tooltip("Distancia desde el centro del personaje hasta los pies para detectar el suelo")]
-    public float distanciaSuelo = 1.1f; 
-    [Tooltip("Desplazamiento vertical desde la posiciÛn del personaje para iniciar el rayo, ˙til si el collider no est· en 0")]
+    public float distanciaSuelo = 0.02f; 
+    [Tooltip("Desplazamiento vertical desde la posici√≥n del personaje para iniciar el rayo, √∫til si el collider no est√° en 0")]
     public float offsetRayo = 0.5f;
     [Tooltip("La capa (Layer) que representa el suelo")]
     public LayerMask capaSuelo;
@@ -29,13 +29,13 @@ public class Peach : MonoBehaviour
 
     void Update()
     {
-        // Determinamos el origen del rayo, elev·ndolo ligeramente si el centro est· desalineado
+        // Determinamos el origen del rayo, elev√°ndolo ligeramente si el centro est√° desalineado
         Vector3 origenRayo = transform.position + Vector3.up * offsetRayo;
 
-        // Detectamos si el personaje est· tocando el suelo mediante un rayo hacia abajo
+        // Detectamos si el personaje est√° tocando el suelo mediante un rayo hacia abajo
         estaEnElSuelo = Physics.Raycast(origenRayo, Vector3.down, distanciaSuelo + offsetRayo, capaSuelo);
 
-        // Actualizamos la variable del Animator para saber si est· en el suelo o cayendo/saltando
+        // Actualizamos la variable del Animator para saber si est√° en el suelo o cayendo/saltando
         if (anim != null)
         {
             anim.SetBool("enSuelo", estaEnElSuelo);
@@ -46,8 +46,8 @@ public class Peach : MonoBehaviour
         {
             Debug.Log("Tecla M presionada por Peach. Detecta suelo: " + estaEnElSuelo);
 
-            // Solo saltamos si estamos en el suelo
-            if (estaEnElSuelo)
+            // Solo saltamos si estamos en el suelo y NO estamos ya movi√©ndonos hacia arriba
+            if (estaEnElSuelo && rb != null && rb.linearVelocity.y <= 0.1f)
             {
                 Saltar();
             }
@@ -62,7 +62,7 @@ public class Peach : MonoBehaviour
             // Aplicamos un impulso hacia arriba
             rb.AddForce(Vector3.up * fuerzaSalto, ForceMode.Impulse);
 
-            // Si quieres que inicie una animaciÛn forzada al instante al presionar saltar
+            // Si quieres que inicie una animaci√≥n forzada al instante al presionar saltar
             if (anim != null) 
             {
                 anim.SetTrigger("salto");
@@ -70,7 +70,7 @@ public class Peach : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("°Falta aÒadir un Rigidbody al objeto de Peach!");
+            Debug.LogWarning("¬°Falta a√±adir un Rigidbody al objeto de Peach!");
         }
     }
 }

@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class wario : MonoBehaviour
+public class Kong : MonoBehaviour
 {
-    [Header("Configuraci�n de Salto")]
-    public float fuerzaSalto = 5f; // Ajusta este valor para saltar m�s alto o m�s bajo
+    [Header("Configuración de Salto")]
+    public float fuerzaSalto = 5f; // Ajusta este valor para saltar más alto o más bajo
 
-    [Header("Configuraci�n de Suelo")]
+    [Header("Configuración de Suelo")]
     [Tooltip("Distancia desde el centro del personaje hasta los pies para detectar el suelo")]
     public float distanciaSuelo = 0.02f; 
     [Tooltip("Desplazamiento vertical desde la posición del personaje para iniciar el rayo, útil si el collider no está en 0")]
@@ -35,16 +35,16 @@ public class wario : MonoBehaviour
         // Detectamos si el personaje está tocando el suelo mediante un rayo hacia abajo
         estaEnElSuelo = Physics.Raycast(origenRayo, Vector3.down, distanciaSuelo + offsetRayo, capaSuelo);
 
-        // Actualizamos la variable del Animator para saber si est� en el suelo o cayendo/saltando
+        // Actualizamos la variable del Animator para saber si está en el suelo o cayendo/saltando
         if (anim != null)
         {
             anim.SetBool("enSuelo", estaEnElSuelo);
         }
 
-        // Comprobamos si se presiona la tecla V
-        if (Keyboard.current != null && Keyboard.current.vKey.wasPressedThisFrame)
+        // Comprobamos si se presiona la tecla L
+        if (Keyboard.current != null && Keyboard.current.lKey.wasPressedThisFrame)
         {
-            Debug.Log("Tecla V presionada por Wario. Detecta suelo: " + estaEnElSuelo);
+            Debug.Log("Tecla L presionada por Kong. Detecta suelo: " + estaEnElSuelo);
 
             // Solo saltamos si estamos en el suelo y NO estamos ya moviéndonos hacia arriba
             if (estaEnElSuelo && rb != null && rb.linearVelocity.y <= 0.1f)
@@ -62,7 +62,7 @@ public class wario : MonoBehaviour
             // Aplicamos un impulso hacia arriba
             rb.AddForce(Vector3.up * fuerzaSalto, ForceMode.Impulse);
 
-            // Si quieres que inicie una animaci�n forzada al instante al presionar saltar
+            // Si quieres que inicie una animación forzada al instante al presionar saltar
             if (anim != null) 
             {
                 anim.SetTrigger("salto");
@@ -70,7 +70,7 @@ public class wario : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("�Falta a�adir un Rigidbody al objeto de Wario!");
+            Debug.LogWarning("¡Falta añadir un Rigidbody al objeto de Kong!");
         }
     }
 }
