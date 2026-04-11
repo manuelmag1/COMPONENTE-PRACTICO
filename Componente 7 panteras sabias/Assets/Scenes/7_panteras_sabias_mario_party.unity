@@ -180,6 +180,10 @@ PrefabInstance:
       value: 132.309
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34d9b1cde3396034ab41f0f2e4ee8b78, type: 2}
@@ -199,10 +203,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 697199373}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
 --- !u!1001 &51551832
 PrefabInstance:
@@ -267,6 +278,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: m_Name
       value: Podoboo P (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -334,6 +349,10 @@ PrefabInstance:
       value: 132.309
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34d9b1cde3396034ab41f0f2e4ee8b78, type: 2}
@@ -353,10 +372,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1298086440}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
 --- !u!4 &100723832 stripped
 Transform:
@@ -696,7 +722,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 297d560726b1b544384339e8ebd6f55f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1328927067}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 297d560726b1b544384339e8ebd6f55f, type: 3}
       insertIndex: -1
@@ -913,6 +942,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &201886170 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 297d560726b1b544384339e8ebd6f55f, type: 3}
+  m_PrefabInstance: {fileID: 201886162}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &207734944 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
@@ -933,6 +967,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 390843900}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &238123869
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238123865}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.2997843
+  m_Direction: 1
+  m_Center: {x: 0.00000037108464, y: 0, z: 0.04}
 --- !u!1001 &268777714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -996,6 +1053,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: m_Name
       value: Podoboo P (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1063,6 +1124,10 @@ PrefabInstance:
       value: 132.309
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34d9b1cde3396034ab41f0f2e4ee8b78, type: 2}
@@ -1082,10 +1147,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 888801793}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
 --- !u!1001 &338455473
 PrefabInstance:
@@ -1227,6 +1299,10 @@ PrefabInstance:
       value: 132.309
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34d9b1cde3396034ab41f0f2e4ee8b78, type: 2}
@@ -1246,10 +1322,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 238123869}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
 --- !u!1 &421017939
 GameObject:
@@ -1353,6 +1436,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 1874150257}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &428936453
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428936449}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.29978412
+  m_Direction: 1
+  m_Center: {x: 0.00000012308351, y: 0, z: 0.04}
 --- !u!1 &483378559 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
@@ -1363,6 +1469,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 836479231}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &483378563
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483378559}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.29978415
+  m_Direction: 1
+  m_Center: {x: 0.0000001251807, y: 0, z: 0.04}
 --- !u!1 &496974911 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
@@ -1489,6 +1618,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 1934715646}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &506536146
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506536142}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.29978418
+  m_Direction: 1
+  m_Center: {x: 0.00000013963513, y: 0, z: 0.04}
 --- !u!1001 &510608498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1725,6 +1877,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 1392870180}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &544953718
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544953714}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.29978412
+  m_Direction: 1
+  m_Center: {x: 0.00000011072627, y: 0, z: 0.04}
 --- !u!4 &635580380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
@@ -1794,6 +1969,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1809,6 +1988,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 3277181}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &697199373
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697199369}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.29978418
+  m_Direction: 1
+  m_Center: {x: 0.00000013492452, y: 0, z: 0.04}
 --- !u!1001 &740041783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1964,9 +2166,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &740041790
 MonoBehaviour:
@@ -2164,7 +2366,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -2231,6 +2433,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: m_Name
       value: Podoboo P (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2301,6 +2507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2367,6 +2577,10 @@ PrefabInstance:
       value: 132.31
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34d9b1cde3396034ab41f0f2e4ee8b78, type: 2}
@@ -2386,10 +2600,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 483378563}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
 --- !u!1 &842618778
 GameObject:
@@ -2547,6 +2768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2562,6 +2787,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 300063808}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &888801793
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888801789}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.29978436
+  m_Direction: 1
+  m_Center: {x: 0.00000014995973, y: 0, z: 0.04}
 --- !u!1 &917389777 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
@@ -2631,6 +2879,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2646,6 +2898,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 1341620970}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &941570493
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941570489}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.29978415
+  m_Direction: 1
+  m_Center: {x: 0.00000013447284, y: 0, z: 0.04}
 --- !u!1 &958688419 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
@@ -2720,6 +2995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2789,10 +3068,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1813318683}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1813318684}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
 --- !u!1001 &998876219
 PrefabInstance:
@@ -2858,6 +3147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2878,6 +3171,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 1348218525}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1047504943
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047504939}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.29978415
+  m_Direction: 1
+  m_Center: {x: 0.00000012931054, y: 0, z: 0.04}
 --- !u!4 &1094263302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
@@ -3060,6 +3376,10 @@ PrefabInstance:
       value: 132.309
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34d9b1cde3396034ab41f0f2e4ee8b78, type: 2}
@@ -3079,11 +3399,71 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1574757810}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+--- !u!1 &1172811544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1172811546}
+  - component: {fileID: 1172811545}
+  m_Layer: 0
+  m_Name: ColisionPies (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1172811545
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172811544}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.37617198, y: 0.11813441, z: 0.28282747}
+  m_Center: {x: 0.0023070197, y: 0.07234027, z: 0.033822466}
+--- !u!4 &1172811546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172811544}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9999762, z: -0, w: 0.0069025722}
+  m_LocalPosition: {x: 1.808, y: 0.79999995, z: 1.915}
+  m_LocalScale: {x: 1.5656999, y: 1.5656999, z: 1.5656999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1192596748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
@@ -3325,6 +3705,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 87530919}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1298086440
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298086436}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.29978406
+  m_Direction: 1
+  m_Center: {x: 0.0000008445663, y: 0, z: 0.04}
 --- !u!1001 &1320689327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3386,6 +3789,10 @@ PrefabInstance:
       value: 132.31
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34d9b1cde3396034ab41f0f2e4ee8b78, type: 2}
@@ -3405,11 +3812,112 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1726336024}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+--- !u!1 &1328927066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1328927067}
+  - component: {fileID: 1328927068}
+  - component: {fileID: 1328927069}
+  - component: {fileID: 1328927070}
+  m_Layer: 0
+  m_Name: ColisionPies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1328927067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328927066}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 201886170}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1328927068
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328927066}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.37617198, y: 0.23924148, z: 0.28282747}
+  m_Center: {x: 0.00230702, y: 0.1328938, z: 0.033822455}
+--- !u!114 &1328927069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328927066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a5f6bb2fbcb614195d18b779caf817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteraccionPersonaje
+--- !u!54 &1328927070
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328927066}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1341620970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3471,6 +3979,10 @@ PrefabInstance:
       value: 132.309
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34d9b1cde3396034ab41f0f2e4ee8b78, type: 2}
@@ -3490,10 +4002,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 941570493}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
 --- !u!1001 &1348218525
 PrefabInstance:
@@ -3556,6 +4075,10 @@ PrefabInstance:
       value: 132.309
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34d9b1cde3396034ab41f0f2e4ee8b78, type: 2}
@@ -3575,10 +4098,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1047504943}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
 --- !u!1001 &1392870180
 PrefabInstance:
@@ -3641,6 +4171,10 @@ PrefabInstance:
       value: 132.309
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34d9b1cde3396034ab41f0f2e4ee8b78, type: 2}
@@ -3660,10 +4194,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 544953718}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
 --- !u!1 &1451018864 stripped
 GameObject:
@@ -3675,6 +4216,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 2106740573}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1451018868
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451018864}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.29978418
+  m_Direction: 1
+  m_Center: {x: 0.000000021458305, y: 0, z: 0.04}
 --- !u!1 &1474718451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,6 +4571,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 1120443644}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1574757810
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574757806}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.29978415
+  m_Direction: 1
+  m_Center: {x: 0.00000012724564, y: 0, z: 0.04}
 --- !u!1001 &1596012409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4070,6 +4657,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: m_Name
       value: Podoboo P (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4277,6 +4868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4403,6 +4998,112 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 815236074}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1696580663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1696580665}
+  - component: {fileID: 1696580664}
+  m_Layer: 0
+  m_Name: ColisionPies (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1696580664
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696580663}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.37617198, y: 0.11813441, z: 0.28282747}
+  m_Center: {x: 0.0023070197, y: 0.07234027, z: 0.033822466}
+--- !u!4 &1696580665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696580663}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9999762, z: -0, w: 0.0069025722}
+  m_LocalPosition: {x: 0.271, y: 0.79999995, z: 1.782}
+  m_LocalScale: {x: 1.5656999, y: 1.5656999, z: 1.5656999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1714287792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1714287794}
+  - component: {fileID: 1714287793}
+  m_Layer: 0
+  m_Name: ColisionPies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1714287793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714287792}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.37617198, y: 0.11813441, z: 0.28282747}
+  m_Center: {x: 0.0023070197, y: 0.07234027, z: 0.033822466}
+--- !u!4 &1714287794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714287792}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9999762, z: -0, w: 0.0069025722}
+  m_LocalPosition: {x: 3.391, y: 0.79999995, z: 2.069}
+  m_LocalScale: {x: 1.5656999, y: 1.5656999, z: 1.5656999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1717297278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4466,6 +5167,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: m_Name
       value: Podoboo P (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4600,7 +5305,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -4659,11 +5364,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 1320689327}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1726336024
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726336020}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.29978418
+  m_Direction: 1
+  m_Center: {x: 0.0000001334404, y: 0, z: 0.04}
 --- !u!4 &1813318680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
   m_PrefabInstance: {fileID: 989053288}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &1813318683
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177207297}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &1813318684
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177207297}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Height: 0.2997843
+  m_Direction: 1
+  m_Center: {x: 0.00000037108464, y: 0, z: 0.04}
 --- !u!4 &1842778380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
@@ -4735,6 +5513,10 @@ PrefabInstance:
       value: 132.309
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34d9b1cde3396034ab41f0f2e4ee8b78, type: 2}
@@ -4754,10 +5536,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 428936453}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
 --- !u!1 &1878336695 stripped
 GameObject:
@@ -4835,6 +5624,10 @@ PrefabInstance:
       value: 132.309
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34d9b1cde3396034ab41f0f2e4ee8b78, type: 2}
@@ -4854,10 +5647,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 506536146}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
 --- !u!1 &2036139785
 GameObject:
@@ -5054,6 +5854,10 @@ PrefabInstance:
       value: 132.309
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34d9b1cde3396034ab41f0f2e4ee8b78, type: 2}
@@ -5073,10 +5877,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podoboo P (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      propertyPath: m_TagString
+      value: Podoboo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1451018868}
   m_SourcePrefab: {fileID: 100100000, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
 --- !u!1 &2130490159
 GameObject:
@@ -5195,9 +6006,12 @@ SceneRoots:
   - {fileID: 842618780}
   - {fileID: 421017941}
   - {fileID: 767451330}
+  - {fileID: 1714287794}
   - {fileID: 201886162}
   - {fileID: 1717536766}
+  - {fileID: 1172811546}
   - {fileID: 2036139787}
   - {fileID: 740041783}
+  - {fileID: 1696580665}
   - {fileID: 2130490163}
   - {fileID: 1496458375}
