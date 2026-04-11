@@ -3,7 +3,12 @@ guid: af6b4151232f2b2468fccbdbb5e5444c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: peach_m_mat
+    second: {fileID: 8233753503323201513, guid: f476889076aaf354ca314b2e4ec48ca5, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
