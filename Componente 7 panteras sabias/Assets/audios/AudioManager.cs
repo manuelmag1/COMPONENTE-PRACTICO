@@ -1,10 +1,8 @@
 using UnityEngine;
 
-using UnityEngine;
-
 public class AudioManager : MonoBehaviour
 {
-    // El Patrón Singleton que viste en el tutorial
+    // The Singleton Pattern
     public static AudioManager Instancia;
 
     private AudioSource audioSource;
@@ -17,11 +15,11 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        // Nos aseguramos de que solo exista un AudioManager
+        // We ensure that only one AudioManager exists
         if (Instancia == null)
         {
             Instancia = this;
-            audioSource = GetComponent<AudioSource>(); // Tomamos el componente automáticamente
+            audioSource = GetComponent<AudioSource>(); // We get the component automatically
         }
         else
         {
@@ -29,7 +27,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // --- FUNCIONES PARA EL JUEGO (Llamadas desde el código) ---
+    // --- GAME FUNCTIONS (Called from code) ---
     public void ReproducirSalto()
     {
         if (sonidoSalto != null) audioSource.PlayOneShot(sonidoSalto);
@@ -45,7 +43,7 @@ public class AudioManager : MonoBehaviour
         if (sonidoVictoria != null) audioSource.PlayOneShot(sonidoVictoria);
     }
 
-    // --- FUNCIÓN PARA LOS BOTONES (Llamada desde el Inspector) ---
+    // --- BUTTON FUNCTION (Called from the Inspector) ---
     public void ReproducirClick()
     {
         if (sonidoBoton != null) audioSource.PlayOneShot(sonidoBoton);
