@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Peach : MonoBehaviour
@@ -47,7 +47,7 @@ public class Peach : MonoBehaviour
             Debug.Log("M key pressed by Peach. Detects ground: " + estaEnElSuelo);
 
             // We only jump if we're on the ground and NOT already moving upward
-            if (estaEnElSuelo && rb != null && rb.velocity.y <= 0.1f)
+            if (estaEnElSuelo && rb != null && rb.linearVelocity.y <= 0.1f)
             {
                 Saltar();
             }
