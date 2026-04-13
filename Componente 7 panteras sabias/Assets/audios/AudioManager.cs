@@ -2,24 +2,30 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // The Singleton Pattern
     public static AudioManager Instancia;
 
-    private AudioSource audioSource;
+    // We use two separate sources: one for music, one for effects
+    private AudioSource sfxSource;
+    private AudioSource musicSource;
 
-    [Header("Efectos de Sonido")]
+    [Header("Shared Sounds")]
     public AudioClip sonidoSalto;
-    public AudioClip sonidoQuemadura;
-    public AudioClip sonidoVictoria;
     public AudioClip sonidoBoton;
 
     void Awake()
     {
-        // We ensure that only one AudioManager exists
+        // Singleton pattern with persistence
         if (Instancia == null)
         {
             Instancia = this;
-            audioSource = GetComponent<AudioSource>(); // We get the component automatically
+            
+            // We create and configure the AudioSources via code
+            sfxSource = gameObject.AddComponent<AudioSource>();
+            musicSource = gameObject.AddComponent<AudioSource>();
+            
+            musicSource.loop = true; // Music should always loop
+            
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
@@ -27,25 +33,30 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // --- GAME FUNCTIONS (Called from code) ---
+    // --- MUSIC CONTROL ---
+    public void ChangeMusic(AudioClip newMusic)
+    {
+        // If the music is already playing, we don't restart it
+        if (musicSource.clip == newMusic) return;
+
+        musicSource.Stop();
+        musicSource.clip = newMusic;
+        musicSource.Play();
+    }
+
+    // --- SFX CONTROL ---
     public void ReproducirSalto()
     {
-        if (sonidoSalto != null) audioSource.PlayOneShot(sonidoSalto);
+        if (sonidoSalto != null) sfxSource.PlayOneShot(sonidoSalto);
     }
 
-    public void ReproducirQuemadura()
-    {
-        if (sonidoQuemadura != null) audioSource.PlayOneShot(sonidoQuemadura);
-    }
-
-    public void ReproducirVictoria()
-    {
-        if (sonidoVictoria != null) audioSource.PlayOneShot(sonidoVictoria);
-    }
-
-    // --- BUTTON FUNCTION (Called from the Inspector) ---
     public void ReproducirClick()
     {
-        if (sonidoBoton != null) audioSource.PlayOneShot(sonidoBoton);
+        if (sonidoBoton != null) sfxSource.PlayOneShot(sonidoBoton);
+    }
+
+    public void ReproducirEfectoEspecifico(AudioClip clip)
+    {
+        if (clip != null) sfxSource.PlayOneShot(clip);
     }
 }

@@ -4,35 +4,38 @@ using System.Collections;
 public class InteraccionPersonaje : MonoBehaviour
 {
     private Animator anim;
+    
+    // Public so the GameManager can read if the player is burning
     public bool yaFueGolpeado = false;
 
+    [Header("Character Specific Audio")]
+    public AudioClip sonidoMuerte;   // Audio when this specific character dies
+    public AudioClip sonidoVictoria; // Audio when this specific character wins
     void Start()
     {
         anim = GetComponent<Animator>();
-
-        // (Optional) If you put the code here to turn off those who don't play from the menu, leave it here:
-        // if (gameObject.name == "Mario" && !SeleccionPersonajes.juegaMario) gameObject.SetActive(false);
-        // if (gameObject.name == "Wario" && !SeleccionPersonajes.juegaWario) gameObject.SetActive(false);
-        // if (gameObject.name == "Peach" && !SeleccionPersonajes.juegaPeach) gameObject.SetActive(false);
-        // if (gameObject.name == "Kong" && !SeleccionPersonajes.juegaKong) gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider otro)
     {
+        // We only care if the object is a Podoboo and the player hasn't been hit yet
         if (otro.CompareTag("Podoboo") && !yaFueGolpeado)
         {
-            // We use gameObject.name to know exactly who got burned
-            Debug.Log("" + gameObject.name + " was burned by the Podoboo!");
-            
+            Debug.Log(gameObject.name + " was burned by the Podoboo!");
             yaFueGolpeado = true;
 
-            // --- THIS IS THE NEW VITAL LINE! ---
-            // We notify the game brain that this character just lost
+            // --- PLAY CHARACTER SPECIFIC DEATH SOUND ---
+            // We send THIS character's death sound to the universal AudioManager
+            if (AudioManager.Instancia != null && sonidoMuerte != null) 
+            {
+                AudioManager.Instancia.ReproducirEfectoEspecifico(sonidoMuerte);
+            }
+
+            // Notify the GameManager that this character just lost
             if (GameManager.Instancia != null) 
             {
                 GameManager.Instancia.RegistrarMuerte();
             }
-            // -------- ----
 
             StartCoroutine(SecuenciaDeEliminacion());
         }
@@ -40,15 +43,16 @@ public class InteraccionPersonaje : MonoBehaviour
 
     IEnumerator SecuenciaDeEliminacion()
     {
+        // Play the defeat animation
         if (anim != null)
         {
             anim.SetTrigger("CaminarFuera"); 
         }
 
-        // We wait for the animation to finish
+        // Wait for the animation to finish (1.5 seconds)
         yield return new WaitForSeconds(1.5f);
 
-        // We deactivate the character
+        // Deactivate the character from the scene
         gameObject.SetActive(false);
     }
 }

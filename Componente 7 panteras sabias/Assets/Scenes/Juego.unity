@@ -757,15 +757,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 297d560726b1b544384339e8ebd6f55f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 201886171}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 297d560726b1b544384339e8ebd6f55f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 201886172}
     - targetCorrespondingSourceObject: {fileID: 8702690717537288790, guid: 297d560726b1b544384339e8ebd6f55f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1668426231}
-    - targetCorrespondingSourceObject: {fileID: 8702690717537288790, guid: 297d560726b1b544384339e8ebd6f55f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1668426230}
   m_SourcePrefab: {fileID: 100100000, guid: 297d560726b1b544384339e8ebd6f55f, type: 3}
 --- !u!1 &201886163 stripped
 GameObject:
@@ -876,18 +870,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteraccionPersonaje
   yaFueGolpeado: 0
---- !u!114 &201886172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201886163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f606d8dffc305364bab899a12a582588, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::playersoundcontroller
+  sonidoMuerte: {fileID: 8300000, guid: 2a7d8268e4dd42a459e739ee079e97dc, type: 3}
+  sonidoVictoria: {fileID: 8300000, guid: a5d7dde8fe6897443a426845c18e9a53, type: 3}
 --- !u!1 &207734944 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
@@ -2631,6 +2615,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteraccionPersonaje
   yaFueGolpeado: 0
+  sonidoMuerte: {fileID: 8300000, guid: 807c483a8cbecc24792446f825029fe6, type: 3}
+  sonidoVictoria: {fileID: 8300000, guid: bc80bfd6fa571964fb7eff9d484c0396, type: 3}
 --- !u!4 &757670596 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
@@ -2648,6 +2634,7 @@ GameObject:
   - component: {fileID: 760284510}
   - component: {fileID: 760284509}
   - component: {fileID: 760284508}
+  - component: {fileID: 760284511}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2769,6 +2756,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760284506}
   m_CullTransparentMesh: 1
+--- !u!114 &760284511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760284506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c1d81b62abef145b8b60dce5f7c63e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
 --- !u!1 &765165341
 GameObject:
   m_ObjectHideFlags: 0
@@ -3098,6 +3097,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteraccionPersonaje
   yaFueGolpeado: 0
+  sonidoMuerte: {fileID: 8300000, guid: 160a0119be1d27348b545bb6da3989a8, type: 3}
+  sonidoVictoria: {fileID: 8300000, guid: 389499fc315db164c84d3b7572f4525c, type: 3}
 --- !u!1 &769531061
 GameObject:
   m_ObjectHideFlags: 0
@@ -5671,6 +5672,51 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!1 &1463140936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1463140938}
+  - component: {fileID: 1463140937}
+  m_Layer: 0
+  m_Name: AudioConfig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1463140937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463140936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ac5652a9b65e549a586928ed28f7d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneAudioConfig
+  backgroundMusic: {fileID: 8300000, guid: 1abfb5cbecfab404b9b53c1cf9475443, type: 3}
+--- !u!4 &1463140938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463140936}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.04976, y: 0.8, z: -14.68256}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1474718451
 GameObject:
   m_ObjectHideFlags: 0
@@ -6005,6 +6051,7 @@ GameObject:
   - component: {fileID: 1531700058}
   - component: {fileID: 1531700057}
   - component: {fileID: 1531700056}
+  - component: {fileID: 1531700059}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -6126,6 +6173,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531700054}
   m_CullTransparentMesh: 1
+--- !u!114 &1531700059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531700054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c1d81b62abef145b8b60dce5f7c63e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
 --- !u!1 &1574757806 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
@@ -6509,20 +6568,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8702690717537288790, guid: 297d560726b1b544384339e8ebd6f55f, type: 3}
   m_PrefabInstance: {fileID: 201886162}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1668426230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668426227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3348d34df56d4624da3de018a99b6df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::sonidosjugador
-  audioSource: {fileID: 0}
-  saltoSonido: {fileID: 0}
 --- !u!82 &1668426231
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7000,6 +7045,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteraccionPersonaje
   yaFueGolpeado: 0
+  sonidoMuerte: {fileID: 8300000, guid: 5acd3e7e2f8322247ace8c34a8323a2d, type: 3}
+  sonidoVictoria: {fileID: 8300000, guid: 9f93d9d5c72f17342bd407e48d47ed66, type: 3}
 --- !u!1 &1726336020 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f11fa1852e3b6fd4aba7141726012d0c, type: 3}
@@ -8115,3 +8162,4 @@ SceneRoots:
   - {fileID: 1435904391}
   - {fileID: 1496458375}
   - {fileID: 1685376347}
+  - {fileID: 1463140938}

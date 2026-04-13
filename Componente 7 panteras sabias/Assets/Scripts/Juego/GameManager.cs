@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour
     }
 
     // On startup, we count active players
-
     IEnumerator ContarJugadoresAlInicio()
     {
         yield return new WaitForEndOfFrame();
@@ -112,8 +111,21 @@ public class GameManager : MonoBehaviour
             textoVictoria.text = ganador.name.ToUpper() + " WINS!";
             textoVictoria.gameObject.SetActive(true);
             
-            // NEW! We show the rematch and quit buttons
+            // We show the rematch and quit buttons
             if (panelBotonesFinales != null) panelBotonesFinales.SetActive(true);
+
+            // --- PLAY CHARACTER SPECIFIC VICTORY SOUND ---
+            InteraccionPersonaje scriptGanador = ganador.GetComponent<InteraccionPersonaje>();
+            
+            // We check if the winner has the script and a victory sound assigned
+            if (scriptGanador != null && scriptGanador.sonidoVictoria != null)
+            {
+                if (AudioManager.Instancia != null)
+                {
+                    // We play the winner's unique sound!
+                    AudioManager.Instancia.ReproducirEfectoEspecifico(scriptGanador.sonidoVictoria);
+                }
+            }
 
             Animator anim = ganador.GetComponent<Animator>();
             if (anim != null)
