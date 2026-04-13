@@ -3,12 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\samue\\Documents\\GitHub\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\samue\\Documents\\GitHub\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\sonidosjugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\sonidosjugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\samue\\Documents\\GitHub\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\audios\\AudioManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\audios\\AudioManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\samue\\Documents\\GitHub\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Peach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Peach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\magli\\Desktop\\proyecto_unity\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\magli\\Desktop\\proyecto_unity\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Peach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\samue\\Documents\\GitHub\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Juego\\Peach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Juego\\Peach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,33 +24,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "sonidosjugador.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\Documents\\GitHub\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\sonidosjugador.cs",
-              "RelativeDocumentMoniker": "Assets\\sonidosjugador.cs",
-              "ToolTip": "C:\\Users\\samue\\Documents\\GitHub\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\sonidosjugador.cs",
-              "RelativeToolTip": "Assets\\sonidosjugador.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Peach.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\Documents\\GitHub\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Juego\\Peach.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Juego\\Peach.cs",
+              "ToolTip": "C:\\Users\\samue\\Documents\\GitHub\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Juego\\Peach.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Juego\\Peach.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T21:33:56.11Z",
+              "WhenOpened": "2026-04-11T23:08:16.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\Documents\\GitHub\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\audios\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\audios\\AudioManager.cs",
+              "ToolTip": "C:\\Users\\samue\\Documents\\GitHub\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\audios\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\audios\\AudioManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T22:11:57.078Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Peach.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\Documents\\GitHub\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Peach.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Peach.cs",
-              "ToolTip": "C:\\Users\\samue\\Documents\\GitHub\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Peach.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Peach.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEUAAAAJAAAAAAAAAA==",
+              "Title": "Mario.cs",
+              "DocumentMoniker": "C:\\Users\\magli\\Desktop\\proyecto_unity\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Mario.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\magli\\Desktop\\proyecto_unity\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Mario.cs",
+              "ToolTip": "C:\\Users\\magli\\Desktop\\proyecto_unity\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Mario.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\magli\\Desktop\\proyecto_unity\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Mario.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T21:13:53.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-10T22:42:23.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Peach.cs",
+              "DocumentMoniker": "C:\\Users\\magli\\Desktop\\proyecto_unity\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Peach.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\magli\\Desktop\\proyecto_unity\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Peach.cs",
+              "ToolTip": "C:\\Users\\magli\\Desktop\\proyecto_unity\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Peach.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\magli\\Desktop\\proyecto_unity\\COMPONENTE-PRACTICO\\Componente 7 panteras sabias\\Assets\\Scripts\\Peach.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwEsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T21:13:53.187Z"
             }
           ]
         }
