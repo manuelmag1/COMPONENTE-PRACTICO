@@ -62,6 +62,12 @@ public class Peach : MonoBehaviour
             // We apply an upward impulse
             rb.AddForce(Vector3.up * fuerzaSalto, ForceMode.Impulse);
 
+                        // --- PLAY JUMP SOUND ---
+            if (AudioManager.Instancia != null) 
+            {
+                AudioManager.Instancia.ReproducirSalto();
+            }
+            
             // If you want a forced animation to start instantly when pressing jump
             if (anim != null) 
             {

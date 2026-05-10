@@ -1,0 +1,51 @@
+﻿using UnityEngine;
+
+public class AudioManager : MonoBehaviour
+{
+    // El Patrón Singleton que viste en el tutorial
+    public static AudioManager Instancia;
+
+    private AudioSource audioSource;
+
+    [Header("Efectos de Sonido")]
+    public AudioClip sonidoSalto;
+    public AudioClip sonidoQuemadura;
+    public AudioClip sonidoVictoria;
+    public AudioClip sonidoBoton;
+
+    void Awake()
+    {
+        // Nos aseguramos de que solo exista un AudioManager
+        if (Instancia == null)
+        {
+            Instancia = this;
+            audioSource = GetComponent<AudioSource>(); // Tomamos el componente automáticamente
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    // --- FUNCIONES PARA EL JUEGO (Llamadas desde el código) ---
+    public void ReproducirSalto()
+    {
+        if (sonidoSalto != null) audioSource.PlayOneShot(sonidoSalto);
+    }
+
+    public void ReproducirQuemadura()
+    {
+        if (sonidoQuemadura != null) audioSource.PlayOneShot(sonidoQuemadura);
+    }
+
+    public void ReproducirVictoria()
+    {
+        if (sonidoVictoria != null) audioSource.PlayOneShot(sonidoVictoria);
+    }
+
+    // --- FUNCIÓN PARA LOS BOTONES (Llamada desde el Inspector) ---
+    public void ReproducirClick()
+    {
+        if (sonidoBoton != null) audioSource.PlayOneShot(sonidoBoton);
+    }
+}
